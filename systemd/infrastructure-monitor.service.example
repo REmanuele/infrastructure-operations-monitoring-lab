@@ -1,0 +1,13 @@
+[Unit]
+Description=Infrastructure Operations Monitor (example, customize first)
+
+[Service]
+Type=oneshot
+User=REPLACE_WITH_LINUX_USER
+Group=REPLACE_WITH_LINUX_USER
+WorkingDirectory=/home/REPLACE_WITH_LINUX_USER/infrastructure-operations-monitoring-lab
+ExecStart=/usr/bin/python3 /home/REPLACE_WITH_LINUX_USER/infrastructure-operations-monitoring-lab/monitor.py --config /home/REPLACE_WITH_LINUX_USER/infrastructure-operations-monitoring-lab/config.local.json
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+TimeoutStartSec=120

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run infrastructure operations monitor periodically
+
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=5min
+AccuracySec=30s
+Unit=infrastructure-monitor.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+config.local.json
+config.*.local.json
+runtime/
+*.log
+
+# Host-specific systemd units (only *.example templates are public)
+systemd/infrastructure-monitor.service
+systemd/infrastructure-monitor.timer

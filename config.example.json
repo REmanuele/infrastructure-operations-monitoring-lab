@@ -1,0 +1,12 @@
+{
+  "host_label": "linux-lab",
+  "state_dir": "runtime",
+  "failure_threshold": 2,
+  "timeout_seconds": 2,
+  "checks": [
+    { "id": "ssh-service", "type": "systemd", "service": "ssh.service" },
+    { "id": "ssh-local-port", "type": "tcp", "host": "127.0.0.1", "port": 22 },
+    { "id": "root-disk", "type": "disk", "path": "/", "warning_percent": 80, "critical_percent": 90 },
+    { "id": "memory", "type": "memory", "warning_percent": 80, "critical_percent": 90 }
+  ]
+}
